@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D778616-1CC4-485D-AE9A-886921842788}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QScaleNew</RootNamespace>
+    <AssemblyName>QScaleNew</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\LoadTruckIco48.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Windows.Forms.1.0.0\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Controls.ProgressBar">
+      <HintPath>..\Thirdparty DLLs\Framework.Controls.ProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="InputDialogBox">
+      <HintPath>..\Thirdparty DLLs\InputDialogBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonForms\frmMsReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\frmMsReportViewer.designer.cs">
+      <DependentUpon>frmMsReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEventMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEventMaker.Designer.cs">
+      <DependentUpon>frmEventMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResetDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResetDatabase.Designer.cs">
+      <DependentUpon>frmResetDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVariables.cs" />
+    <Compile Include="LicenseInfo.cs" />
+    <Compile Include="MasterSetupForms\frmClientDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmClientDetails.Designer.cs">
+      <DependentUpon>frmClientDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmClientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmClientList.Designer.cs">
+      <DependentUpon>frmClientList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmCompanyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmCompanyInfo.Designer.cs">
+      <DependentUpon>frmCompanyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmDatabaseConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmDatabaseConfiguration.Designer.cs">
+      <DependentUpon>frmDatabaseConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmMeasurementUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmMeasurementUnit.Designer.cs">
+      <DependentUpon>frmMeasurementUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmPermissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmPermissions.designer.cs">
+      <DependentUpon>frmPermissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmAddEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmAddEditProduct.Designer.cs">
+      <DependentUpon>frmAddEditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmUserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmUserDetails.Designer.cs">
+      <DependentUpon>frmUserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmProductList.Designer.cs">
+      <DependentUpon>frmProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterSetupForms\frmUserList.Designer.cs">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramMenuForms\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramMenuForms\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramMenuForms\frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramMenuForms\frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramMenuForms\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramMenuForms\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportMenuForms\frmSearchReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportMenuForms\frmSearchReport.Designer.cs">
+      <DependentUpon>frmSearchReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="WeightMenuForms\frmPendingTruckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightMenuForms\frmPendingTruckList.Designer.cs">
+      <DependentUpon>frmPendingTruckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeightMenuForms\frmTruckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightMenuForms\frmTruckIn.Designer.cs">
+      <DependentUpon>frmTruckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeightMenuForms\frmDeleteWeightHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightMenuForms\frmDeleteWeightHistory.Designer.cs">
+      <DependentUpon>frmDeleteWeightHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeightMenuForms\frmTruckInHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightMenuForms\frmTruckInHistory.Designer.cs">
+      <DependentUpon>frmTruckInHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeightMenuForms\frmTruckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightMenuForms\frmTruckOut.Designer.cs">
+      <DependentUpon>frmTruckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeightMenuForms\frmTruckOutHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightMenuForms\frmTruckOutHistory.Designer.cs">
+      <DependentUpon>frmTruckOutHistory.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AllReports\Report.rdlc" />
+    <EmbeddedResource Include="AllReports\Report1.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports\TruckOutReceipt.rdlc" />
+    <EmbeddedResource Include="AllReports\TruckInReceipt.rdlc" />
+    <EmbeddedResource Include="CommonForms\frmMsReportViewer.resx">
+      <DependentUpon>frmMsReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterSetupForms\frmClientDetails.resx">
+      <DependentUpon>frmClientDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterSetupForms\frmClientList.resx">
+      <DependentUpon>frmClientList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterSetupForms\frmCompanyInfo.resx">
+      <DependentUpon>frmCompanyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterSetupForms\frmDatabaseConfiguration.resx">
+      <DependentUpon>frmDatabaseConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterSetupForms\frmMeasurementUnit.resx">
+      <DependentUpon>frmMeasurementUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterSetupForms\frmPermissions.resx">
+      <DependentUpon>frmPermissions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterSetupForms\frmAddEditProduct.resx">
+      <DependentUpon>frmAddEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterSetupForms\frmUserDetails.resx">
+      <DependentUpon>frmUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterSetupForms\frmProductList.resx">
+      <DependentUpon>frmProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterSetupForms\frmUserList.resx">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramMenuForms\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramMenuForms\frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramMenuForms\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportMenuForms\frmSearchReport.resx">
+      <DependentUpon>frmSearchReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightMenuForms\frmPendingTruckList.resx">
+      <DependentUpon>frmPendingTruckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightMenuForms\frmTruckIn.resx">
+      <DependentUpon>frmTruckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightMenuForms\frmDeleteWeightHistory.resx">
+      <DependentUpon>frmDeleteWeightHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightMenuForms\frmTruckInHistory.resx">
+      <DependentUpon>frmTruckInHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightMenuForms\frmTruckOut.resx">
+      <DependentUpon>frmTruckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightMenuForms\frmTruckOutHistory.resx">
+      <DependentUpon>frmTruckOutHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AllReports\rptTruckInReceipt.rdlc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AllReports\rptTruckOutReceipt.rdlc" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CustomObjects.Client.datasource" />
+    <None Include="Properties\DataSources\CustomObjects.CompanyInfo.datasource" />
+    <None Include="Properties\DataSources\CustomObjects.ReportData.datasource" />
+    <None Include="Properties\DataSources\CustomObjects.TruckIn.datasource" />
+    <None Include="Properties\DataSources\CustomObjects.TruckOut.datasource" />
+    <None Include="Properties\DataSources\CustomObjects.UserDetails.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search1Png16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomerBlackPng32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomerListBlackPng32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomObjects\CustomObjects.csproj">
+      <Project>{5c98ee29-93e2-403c-aa28-c91b0c6ceb62}</Project>
+      <Name>CustomObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sCommonLib\sCommonLib.csproj">
+      <Project>{f8cb025b-3085-4e7c-a614-383b260bec7f}</Project>
+      <Name>sCommonLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadTruckIco48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnlockRed32Png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnlockRed48Png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockGreen48Png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockGreen32Png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddCustomerBlackPng32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchCustomerBlackPng32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search3Png16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConnectToPort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisconnectFromPort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmptyTruckBig128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadTruckBig128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitProgram16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogInGreenArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogOutGreenArrowDoor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogOutWhiteArrow16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QFlexIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeviceStatusDisconnected128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QFlexSplash.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ServerIco16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserIconLoginBig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoggedIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoggedOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmptyTruckIco32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeviceStatusConnected128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomerListBlackIco32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadTruckPng16.png" />
+    <None Include="Resources\LoadTruckPng24.png" />
+    <None Include="Resources\LoadTruckPng32.png" />
+    <None Include="Resources\LoadTruckPng48.png" />
+    <None Include="Resources\EmptyTruckPng16.png" />
+    <None Include="Resources\EmptyTruckPng32.png" />
+    <None Include="Resources\SelectEmptyTruckPng32.png" />
+    <None Include="Resources\PermissionPageKey16.png" />
+    <None Include="Resources\PermissionPageKey32.png" />
+    <None Include="Resources\ServerPng16.png" />
+    <None Include="Resources\ServerPng32.png" />
+    <None Include="Resources\TrialBalancePng16.png" />
+    <None Include="Resources\TrialBalancePng24.png" />
+    <None Include="Resources\ErrorLogPng16.png" />
+    <None Include="Resources\KeyNice16.png" />
+    <None Include="Resources\KeyNice32.png" />
+    <None Include="Resources\CustomerBlackIco32.ico" />
+    <None Include="Resources\UserGroupBlueGreenIco.ico" />
+    <None Include="Resources\UserGreen16.png" />
+    <None Include="Resources\UserGroupBlueGreen16.png" />
+    <None Include="Resources\OfficeTree16.png" />
+    <None Include="Resources\OfficeTree32.png" />
+    <None Include="Resources\KeyNiceIco16.ico" />
+    <None Include="Resources\OfficeTreeIco16.ico" />
+    <None Include="Resources\TrialBalanceIco48.ico" />
+    <None Include="Resources\VanIn.png" />
+    <None Include="Resources\VanOut.png" />
+    <None Include="Resources\WeighStation.png" />
+    <None Include="Resources\ConnectedAsh.png" />
+    <None Include="Resources\ConnectedRed.png" />
+    <None Include="Resources\DisconnectedGreen.png" />
+    <None Include="Resources\DisconnectedAsh.png" />
+    <None Include="Resources\gunny_bag.png" />
+    <None Include="bin\Debug\brotherslogosmall.jpg" />
+    <None Include="Resources\brotherslogobig.jpg" />
+    <None Include="Resources\truckinblue.png" />
+    <None Include="Resources\truckinred.png" />
+    <None Include="Resources\truckinyellow.png" />
+    <None Include="Resources\truckoutblue.png" />
+    <None Include="Resources\truckoutred.png" />
+    <None Include="Resources\truckoutyellow.png" />
+    <None Include="Resources\AccurateWesternScale.jpg" />
+    <None Include="Resources\colormatchtruck.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

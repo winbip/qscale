@@ -1,0 +1,1623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>3b373506-ebf4-4d9b-9dbe-315ce8da9cbf</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="pReportCulture">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>bn-BD-skpaul</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="pMeasurementUnitName">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>false</rd:SnapToGrid>
+  <rd:ReportID>99f60d0c-0731-40a9-be4a-d6aa59e36de1</rd:ReportID>
+  <DataSets>
+    <DataSet Name="CustomObjects_CompanyInfo">
+      <Fields>
+        <Field Name="AddressLineOne">
+          <DataField>AddressLineOne</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AddressLineTwo">
+          <DataField>AddressLineTwo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompanyId">
+          <DataField>CompanyId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CustomObjects</rd:DataSetName>
+        <rd:TableName>CompanyInfo</rd:TableName>
+        <rd:ObjectDataSourceType>CustomObjects.CompanyInfo, CustomObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="CustomObjects_TruckIn">
+      <Fields>
+        <Field Name="ChallanNo">
+          <DataField>ChallanNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ClientDetails">
+          <DataField>ClientDetails</DataField>
+          <rd:TypeName>CustomObjects.Client</rd:TypeName>
+        </Field>
+        <Field Name="DriverName">
+          <DataField>DriverName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MaterialDescription">
+          <DataField>MaterialDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TruckInDate">
+          <DataField>TruckInDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TruckInId">
+          <DataField>TruckInId</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="TruckInTime">
+          <DataField>TruckInTime</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TruckInWeight">
+          <DataField>TruckInWeight</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TruckNo">
+          <DataField>TruckNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UserDetail">
+          <DataField>UserDetail</DataField>
+          <rd:TypeName>CustomObjects.UserDetails</rd:TypeName>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ClientCode">
+          <DataField>ClientCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ClientId">
+          <DataField>ClientId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ClientName">
+          <DataField>ClientName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ClientTypeDetails">
+          <DataField>ClientTypeDetails</DataField>
+          <rd:TypeName>CustomObjects.ClientType</rd:TypeName>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EmailAddress">
+          <DataField>EmailAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FaxNo">
+          <DataField>FaxNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TelephoneNo">
+          <DataField>TelephoneNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CustomObjects</rd:DataSetName>
+        <rd:TableName>TruckIn</rd:TableName>
+        <rd:ObjectDataSourceType>CustomObjects.TruckIn, CustomObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>8.25in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox73">
+        <Top>5.66146in</Top>
+        <Width>0.16667in</Width>
+        <Style>
+          <FontSize>7pt</FontSize>
+        </Style>
+        <ZIndex>78</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>7.46875in</Left>
+        <Height>0.13542in</Height>
+        <Value>x</Value>
+      </Textbox>
+      <Textbox Name="textbox72">
+        <Top>5.66146in</Top>
+        <Width>0.16667in</Width>
+        <Style>
+          <FontSize>7pt</FontSize>
+        </Style>
+        <ZIndex>77</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.02083in</Left>
+        <Height>0.13542in</Height>
+        <Value>x</Value>
+      </Textbox>
+      <Textbox Name="textbox71">
+        <rd:DefaultName>textbox71</rd:DefaultName>
+        <Top>5.66146in</Top>
+        <Width>0.16667in</Width>
+        <Style>
+          <FontSize>7pt</FontSize>
+        </Style>
+        <ZIndex>76</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.57292in</Left>
+        <Height>0.13542in</Height>
+        <Value>x</Value>
+      </Textbox>
+      <Rectangle Name="rectangle2">
+        <Left>6.25521in</Left>
+        <ZIndex>75</ZIndex>
+        <ReportItems>
+          <Textbox Name="textbox24">
+            <Top>0.0625in</Top>
+            <Width>1.26041in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Center</TextAlign>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <Left>0.0625in</Left>
+            <Height>0.22917in</Height>
+            <Value>Weight Receipt</Value>
+          </Textbox>
+          <Textbox Name="textbox25">
+            <Top>0.31251in</Top>
+            <Width>1.26041in</Width>
+            <Style>
+              <FontStyle>Italic</FontStyle>
+              <FontSize>9pt</FontSize>
+              <TextAlign>Center</TextAlign>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <Left>0.0625in</Left>
+            <Height>0.23959in</Height>
+            <Value>(Client Copy)</Value>
+          </Textbox>
+        </ReportItems>
+        <Top>6.18593in</Top>
+        <Width>1.38541in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Height>0.59375in</Height>
+      </Rectangle>
+      <Line Name="line2">
+        <Top>8.13906in</Top>
+        <Width>7.10417in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Dotted</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>74</ZIndex>
+        <Left>0.55209in</Left>
+        <Height>0in</Height>
+      </Line>
+      <Line Name="line3">
+        <Top>7.6953in</Top>
+        <Width>7.10417in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Dotted</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>73</ZIndex>
+        <Left>0.55209in</Left>
+        <Height>0in</Height>
+      </Line>
+      <Line Name="line7">
+        <Top>7.18073in</Top>
+        <Width>7.14584in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>3pt</Default>
+          </BorderWidth>
+        </Style>
+        <ZIndex>72</ZIndex>
+        <Left>0.53126in</Left>
+        <Height>-0.01042in</Height>
+      </Line>
+      <Rectangle Name="rectangle3">
+        <Left>0.55209in</Left>
+        <ZIndex>71</ZIndex>
+        <ReportItems>
+          <Textbox Name="textbox27">
+            <Top>0.04219in</Top>
+            <Width>3.67709in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>11</ZIndex>
+            <Left>0.10416in</Left>
+            <Height>0.17709in</Height>
+            <Value>="Weight Details  " &amp; "(in " &amp; Parameters!pMeasurementUnitName.Value &amp; ")"</Value>
+          </Textbox>
+          <Line Name="line8">
+            <Top>0.27084in</Top>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <ZIndex>10</ZIndex>
+            <Left>0.02083in</Left>
+            <Height>0in</Height>
+          </Line>
+          <Textbox Name="textbox28">
+            <Top>0.40625in</Top>
+            <Width>0.79167in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>9</ZIndex>
+            <Left>0.60417in</Left>
+            <Height>0.19792in</Height>
+            <Value>Weight ID:</Value>
+          </Textbox>
+          <Textbox Name="textbox29">
+            <Top>0.68854in</Top>
+            <Width>0.79167in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>8</ZIndex>
+            <Left>0.60417in</Left>
+            <Height>0.19792in</Height>
+            <Value>Weight:</Value>
+          </Textbox>
+          <Textbox Name="textbox30">
+            <Top>0.68854in</Top>
+            <Width>1.76042in</Width>
+            <Style>
+              <Format>N</Format>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>7</ZIndex>
+            <Left>1.44792in</Left>
+            <Height>0.19792in</Height>
+            <Value>=Sum(Fields!TruckInWeight.Value, "CustomObjects_TruckIn")</Value>
+          </Textbox>
+          <Textbox Name="textbox31">
+            <Top>0.68854in</Top>
+            <Width>0.79167in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>6</ZIndex>
+            <Left>4.46875in</Left>
+            <Height>0.19792in</Height>
+            <Value>Time:</Value>
+          </Textbox>
+          <Textbox Name="textbox32">
+            <Top>0.40625in</Top>
+            <Width>0.79167in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>5</ZIndex>
+            <Left>4.46875in</Left>
+            <Height>0.19792in</Height>
+            <Value>Date:</Value>
+          </Textbox>
+          <Textbox Name="textbox33">
+            <Top>0.40625in</Top>
+            <Width>1.77084in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>4</ZIndex>
+            <Left>1.44792in</Left>
+            <Height>0.19792in</Height>
+            <Value>=First(Fields!TruckInId.Value, "CustomObjects_TruckIn")</Value>
+          </Textbox>
+          <Textbox Name="textbox34">
+            <Top>0.68854in</Top>
+            <Width>1.4375in</Width>
+            <Style>
+              <Format>hh:mm:ss tt</Format>
+              <TextAlign>Left</TextAlign>
+              <Language>=Parameters!pReportCulture.Value</Language>
+            </Style>
+            <ZIndex>3</ZIndex>
+            <Left>5.3125in</Left>
+            <Height>0.19792in</Height>
+            <Value>=First(Fields!TruckInTime.Value, "CustomObjects_TruckIn")</Value>
+          </Textbox>
+          <Textbox Name="textbox35">
+            <Top>0.40625in</Top>
+            <Width>1.45834in</Width>
+            <Style>
+              <Format>d</Format>
+              <TextAlign>Left</TextAlign>
+              <Language>=Parameters!pReportCulture.Value</Language>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <Left>5.3125in</Left>
+            <Height>0.19792in</Height>
+            <Value>=First(Fields!TruckInDate.Value, "CustomObjects_TruckIn")</Value>
+          </Textbox>
+          <Textbox Name="textbox36">
+            <Top>1.01041in</Top>
+            <Width>5.00001in</Width>
+            <Style>
+              <FontSize>8pt</FontSize>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <Left>1.75in</Left>
+            <Height>0.15625in</Height>
+            <Value>=First(Fields!UserDetail.Value.FullName, "CustomObjects_TruckIn")</Value>
+          </Textbox>
+          <Textbox Name="textbox37">
+            <Top>1.01041in</Top>
+            <Width>1.09375in</Width>
+            <Style>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <Left>0.59375in</Left>
+            <Height>0.15625in</Height>
+            <Value>Operator Name:</Value>
+          </Textbox>
+        </ReportItems>
+        <Top>9.14323in</Top>
+        <Width>7.13541in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Height>1.27188in</Height>
+      </Rectangle>
+      <Textbox Name="textbox38">
+        <Top>11.04427in</Top>
+        <Width>1.41667in</Width>
+        <Style>
+          <BorderColor>
+            <Top>Black</Top>
+          </BorderColor>
+          <BorderStyle>
+            <Top>Solid</Top>
+          </BorderStyle>
+          <BorderWidth>
+            <Top>1pt</Top>
+          </BorderWidth>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>70</ZIndex>
+        <Left>6.25001in</Left>
+        <Height>0.1875in</Height>
+        <Value>Operator Signature</Value>
+      </Textbox>
+      <Textbox Name="textbox39">
+        <Top>11.04427in</Top>
+        <Width>1.41667in</Width>
+        <Style>
+          <BorderColor>
+            <Top>Black</Top>
+          </BorderColor>
+          <BorderStyle>
+            <Top>Solid</Top>
+          </BorderStyle>
+          <BorderWidth>
+            <Top>1pt</Top>
+          </BorderWidth>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>69</ZIndex>
+        <Left>4.37153in</Left>
+        <Height>0.1875in</Height>
+        <Value>Security Signature</Value>
+      </Textbox>
+      <Textbox Name="textbox40">
+        <Top>11.04427in</Top>
+        <Width>1.41667in</Width>
+        <Style>
+          <BorderColor>
+            <Top>Black</Top>
+          </BorderColor>
+          <BorderStyle>
+            <Top>Solid</Top>
+          </BorderStyle>
+          <BorderWidth>
+            <Top>1pt</Top>
+          </BorderWidth>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>68</ZIndex>
+        <Left>2.49306in</Left>
+        <Height>0.1875in</Height>
+        <Value>Customer Signature</Value>
+      </Textbox>
+      <Textbox Name="textbox41">
+        <Top>11.04427in</Top>
+        <Width>1.41667in</Width>
+        <Style>
+          <BorderColor>
+            <Top>Black</Top>
+          </BorderColor>
+          <BorderStyle>
+            <Top>Solid</Top>
+          </BorderStyle>
+          <BorderWidth>
+            <Top>1pt</Top>
+          </BorderWidth>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>67</ZIndex>
+        <Left>0.61459in</Left>
+        <Height>0.1875in</Height>
+        <Value>Driver Signature</Value>
+      </Textbox>
+      <Textbox Name="textbox42">
+        <Top>8.53211in</Top>
+        <Width>0.3125in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>66</ZIndex>
+        <Left>4.23959in</Left>
+        <Height>0.16667in</Height>
+        <Value>Tel.:</Value>
+      </Textbox>
+      <Textbox Name="textbox43">
+        <Top>8.53211in</Top>
+        <Width>1.70834in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>65</ZIndex>
+        <Left>4.61459in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.TelephoneNo, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox44">
+        <Top>8.53211in</Top>
+        <Width>0.36459in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>64</ZIndex>
+        <Left>6.45834in</Left>
+        <Height>0.16667in</Height>
+        <Value>FAX:</Value>
+      </Textbox>
+      <Textbox Name="textbox45">
+        <Top>8.53211in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>63</ZIndex>
+        <Left>6.88542in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.FaxNo, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox46">
+        <Top>8.77864in</Top>
+        <Width>0.44792in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>62</ZIndex>
+        <Left>5.61459in</Left>
+        <Height>0.16667in</Height>
+        <Value>Email:</Value>
+      </Textbox>
+      <Textbox Name="textbox47">
+        <Top>8.77864in</Top>
+        <Width>1.61458in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>61</ZIndex>
+        <Left>6.06252in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.EmailAddress, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox48">
+        <Top>8.77864in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>60</ZIndex>
+        <Left>0.55209in</Left>
+        <Height>0.16667in</Height>
+        <Value>Address:</Value>
+      </Textbox>
+      <Textbox Name="textbox49">
+        <Top>8.77864in</Top>
+        <Width>4.14583in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>59</ZIndex>
+        <Left>1.39584in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientTypeDetails.Value.Address, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox50">
+        <Top>8.53211in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>58</ZIndex>
+        <Left>0.55209in</Left>
+        <Height>0.16667in</Height>
+        <Value>Company:</Value>
+      </Textbox>
+      <Textbox Name="textbox51">
+        <Top>8.53211in</Top>
+        <Width>2.72917in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>57</ZIndex>
+        <Left>1.39584in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.CompanyName, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox52">
+        <Top>8.27517in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>56</ZIndex>
+        <Left>0.55209in</Left>
+        <Height>0.16667in</Height>
+        <Value>Client Code:</Value>
+      </Textbox>
+      <Textbox Name="textbox53">
+        <Top>8.27517in</Top>
+        <Width>1.08334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>55</ZIndex>
+        <Left>1.39584in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.ClientCode, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox54">
+        <Top>7.82031in</Top>
+        <Width>0.83334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>54</ZIndex>
+        <Left>2.56252in</Left>
+        <Height>0.19792in</Height>
+        <Value>Driver Name:</Value>
+      </Textbox>
+      <Textbox Name="textbox55">
+        <Top>7.82031in</Top>
+        <Width>4.23959in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>53</ZIndex>
+        <Left>3.41668in</Left>
+        <Height>0.19792in</Height>
+        <Value>=First(Fields!DriverName.Value, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox56">
+        <Top>7.36197in</Top>
+        <Width>0.67709in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>52</ZIndex>
+        <Left>6.97917in</Left>
+        <Height>0.19792in</Height>
+        <Value>=Sum(Fields!Quantity.Value, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox57">
+        <Top>7.36197in</Top>
+        <Width>0.59376in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>51</ZIndex>
+        <Left>6.34376in</Left>
+        <Height>0.19792in</Height>
+        <Value>Quantity:</Value>
+      </Textbox>
+      <Textbox Name="textbox58">
+        <Top>7.36197in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>50</ZIndex>
+        <Left>0.55209in</Left>
+        <Height>0.19792in</Height>
+        <Value>Challan No.:</Value>
+      </Textbox>
+      <Textbox Name="textbox59">
+        <Top>7.36197in</Top>
+        <Width>1.08334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>49</ZIndex>
+        <Left>1.39584in</Left>
+        <Height>0.19792in</Height>
+        <Value>=First(Fields!ChallanNo.Value, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox60">
+        <Top>8.27517in</Top>
+        <Width>2.54167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>48</ZIndex>
+        <Left>5.13542in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.ClientName, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox61">
+        <Top>8.27517in</Top>
+        <Width>0.44792in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>47</ZIndex>
+        <Left>4.62501in</Left>
+        <Height>0.16667in</Height>
+        <Value>Name:</Value>
+      </Textbox>
+      <Textbox Name="textbox62">
+        <Top>8.27865in</Top>
+        <Width>0.80208in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>46</ZIndex>
+        <Left>2.56252in</Left>
+        <Height>0.16667in</Height>
+        <Value>Client Type:</Value>
+      </Textbox>
+      <Textbox Name="textbox63">
+        <Top>7.82031in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>45</ZIndex>
+        <Left>0.55209in</Left>
+        <Height>0.19792in</Height>
+        <Value>Truck No.:</Value>
+      </Textbox>
+      <Textbox Name="textbox64">
+        <Top>7.36197in</Top>
+        <Width>0.83334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>44</ZIndex>
+        <Left>2.56252in</Left>
+        <Height>0.19792in</Height>
+        <Value>Description:</Value>
+      </Textbox>
+      <Textbox Name="textbox65">
+        <Top>8.27865in</Top>
+        <Width>1.08334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>43</ZIndex>
+        <Left>3.41668in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.ClientTypeDetails.ClientTypeName, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox66">
+        <Top>7.36197in</Top>
+        <Width>2.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>42</ZIndex>
+        <Left>3.4271in</Left>
+        <Height>0.19792in</Height>
+        <Value>=First(Fields!MaterialDescription.Value, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox67">
+        <Top>7.82031in</Top>
+        <Width>1.08334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>41</ZIndex>
+        <Left>1.39584in</Left>
+        <Height>0.19792in</Height>
+        <Value>=First(Fields!TruckNo.Value, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox68">
+        <Top>6.76822in</Top>
+        <Width>5.10417in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>40</ZIndex>
+        <Left>0.55209in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!AddressLineTwo.Value, "CustomObjects_CompanyInfo")</Value>
+      </Textbox>
+      <Textbox Name="textbox69">
+        <Top>6.51822in</Top>
+        <Width>5.10417in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>39</ZIndex>
+        <Left>0.55209in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!AddressLineOne.Value, "CustomObjects_CompanyInfo")</Value>
+      </Textbox>
+      <Textbox Name="textbox70">
+        <Top>6.18489in</Top>
+        <Width>5.10417in</Width>
+        <Style>
+          <FontSize>12pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>38</ZIndex>
+        <Left>0.55209in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!CompanyName.Value, "CustomObjects_CompanyInfo")</Value>
+      </Textbox>
+      <Rectangle Name="rectangle4">
+        <Left>6.25521in</Left>
+        <ZIndex>37</ZIndex>
+        <ReportItems>
+          <Textbox Name="textbox15">
+            <Top>0.0625in</Top>
+            <Width>1.26041in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Center</TextAlign>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <Left>0.0625in</Left>
+            <Height>0.22917in</Height>
+            <Value>Weight Receipt</Value>
+          </Textbox>
+          <Textbox Name="textbox94">
+            <Top>0.31251in</Top>
+            <Width>1.26041in</Width>
+            <Style>
+              <FontStyle>Italic</FontStyle>
+              <FontSize>9pt</FontSize>
+              <TextAlign>Center</TextAlign>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <Left>0.0625in</Left>
+            <Height>0.23959in</Height>
+            <Value>(Office Copy)</Value>
+          </Textbox>
+        </ReportItems>
+        <Top>0.27187in</Top>
+        <Width>1.38541in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Height>0.59375in</Height>
+      </Rectangle>
+      <Line Name="line6">
+        <Top>2.225in</Top>
+        <Width>7.10417in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Dotted</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>36</ZIndex>
+        <Left>0.55208in</Left>
+        <Height>0in</Height>
+      </Line>
+      <Line Name="line4">
+        <Top>1.78124in</Top>
+        <Width>7.10417in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Dotted</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>35</ZIndex>
+        <Left>0.55208in</Left>
+        <Height>0in</Height>
+      </Line>
+      <Line Name="line5">
+        <Top>1.26667in</Top>
+        <Width>7.14584in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>3pt</Default>
+          </BorderWidth>
+        </Style>
+        <ZIndex>34</ZIndex>
+        <Left>0.53125in</Left>
+        <Height>-0.01042in</Height>
+      </Line>
+      <Rectangle Name="rectangle1">
+        <Left>0.55208in</Left>
+        <ZIndex>33</ZIndex>
+        <ReportItems>
+          <Textbox Name="textbox26">
+            <Top>0.04219in</Top>
+            <Width>3.67709in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>11</ZIndex>
+            <Left>0.10416in</Left>
+            <Height>0.17709in</Height>
+            <Value>="Weight Details  " &amp; "(in " &amp; Parameters!pMeasurementUnitName.Value &amp; ")"</Value>
+          </Textbox>
+          <Line Name="line1">
+            <Top>0.27084in</Top>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <ZIndex>10</ZIndex>
+            <Left>0.02083in</Left>
+            <Height>0in</Height>
+          </Line>
+          <Textbox Name="textbox20">
+            <rd:DefaultName>textbox20</rd:DefaultName>
+            <Top>0.40625in</Top>
+            <Width>0.79167in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>9</ZIndex>
+            <Left>0.60417in</Left>
+            <Height>0.19792in</Height>
+            <Value>Weight ID:</Value>
+          </Textbox>
+          <Textbox Name="textbox23">
+            <Top>0.68854in</Top>
+            <Width>0.79167in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>8</ZIndex>
+            <Left>0.60417in</Left>
+            <Height>0.19792in</Height>
+            <Value>Weight:</Value>
+          </Textbox>
+          <Textbox Name="TruckInWeight">
+            <rd:DefaultName>TruckInWeight</rd:DefaultName>
+            <Top>0.68854in</Top>
+            <Width>1.76042in</Width>
+            <Style>
+              <Format>N</Format>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>7</ZIndex>
+            <Left>1.44792in</Left>
+            <Height>0.19792in</Height>
+            <Value>=Sum(Fields!TruckInWeight.Value, "CustomObjects_TruckIn")</Value>
+          </Textbox>
+          <Textbox Name="textbox22">
+            <Top>0.68854in</Top>
+            <Width>0.79167in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>6</ZIndex>
+            <Left>4.46875in</Left>
+            <Height>0.19792in</Height>
+            <Value>Time:</Value>
+          </Textbox>
+          <Textbox Name="textbox21">
+            <rd:DefaultName>textbox21</rd:DefaultName>
+            <Top>0.40625in</Top>
+            <Width>0.79167in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>5</ZIndex>
+            <Left>4.46875in</Left>
+            <Height>0.19792in</Height>
+            <Value>Date:</Value>
+          </Textbox>
+          <Textbox Name="TruckInId">
+            <rd:DefaultName>TruckInId</rd:DefaultName>
+            <Top>0.40625in</Top>
+            <Width>1.77084in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>4</ZIndex>
+            <Left>1.44792in</Left>
+            <Height>0.19792in</Height>
+            <Value>=First(Fields!TruckInId.Value, "CustomObjects_TruckIn")</Value>
+          </Textbox>
+          <Textbox Name="TruckInTime">
+            <rd:DefaultName>TruckInTime</rd:DefaultName>
+            <Top>0.68854in</Top>
+            <Width>1.4375in</Width>
+            <Style>
+              <Format>hh:mm:ss tt</Format>
+              <TextAlign>Left</TextAlign>
+              <Language>=Parameters!pReportCulture.Value</Language>
+            </Style>
+            <ZIndex>3</ZIndex>
+            <Left>5.3125in</Left>
+            <Height>0.19792in</Height>
+            <Value>=First(Fields!TruckInTime.Value, "CustomObjects_TruckIn")</Value>
+          </Textbox>
+          <Textbox Name="TruckInDate">
+            <rd:DefaultName>TruckInDate</rd:DefaultName>
+            <Top>0.40625in</Top>
+            <Width>1.45834in</Width>
+            <Style>
+              <Format>d</Format>
+              <TextAlign>Left</TextAlign>
+              <Language>=Parameters!pReportCulture.Value</Language>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <Left>5.3125in</Left>
+            <Height>0.19792in</Height>
+            <Value>=First(Fields!TruckInDate.Value, "CustomObjects_TruckIn")</Value>
+          </Textbox>
+          <Textbox Name="UserDetail">
+            <rd:DefaultName>UserDetail</rd:DefaultName>
+            <Top>1.01041in</Top>
+            <Width>5.00001in</Width>
+            <Style>
+              <FontSize>8pt</FontSize>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <Left>1.75in</Left>
+            <Height>0.15625in</Height>
+            <Value>=First(Fields!UserDetail.Value.FullName, "CustomObjects_TruckIn")</Value>
+          </Textbox>
+          <Textbox Name="textbox7">
+            <rd:DefaultName>textbox7</rd:DefaultName>
+            <Top>1.01041in</Top>
+            <Width>1.09375in</Width>
+            <Style>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <Left>0.59375in</Left>
+            <Height>0.15625in</Height>
+            <Value>Operator Name:</Value>
+          </Textbox>
+        </ReportItems>
+        <Top>3.22917in</Top>
+        <Width>7.13541in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Height>1.27188in</Height>
+      </Rectangle>
+      <Textbox Name="textbox19">
+        <Top>5.13021in</Top>
+        <Width>1.41667in</Width>
+        <Style>
+          <BorderColor>
+            <Top>Black</Top>
+          </BorderColor>
+          <BorderStyle>
+            <Top>Solid</Top>
+          </BorderStyle>
+          <BorderWidth>
+            <Top>1pt</Top>
+          </BorderWidth>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>32</ZIndex>
+        <Left>6.20834in</Left>
+        <Height>0.1875in</Height>
+        <Value>Operator Signature</Value>
+      </Textbox>
+      <Textbox Name="textbox18">
+        <Top>5.13021in</Top>
+        <Width>1.41667in</Width>
+        <Style>
+          <BorderColor>
+            <Top>Black</Top>
+          </BorderColor>
+          <BorderStyle>
+            <Top>Solid</Top>
+          </BorderStyle>
+          <BorderWidth>
+            <Top>1pt</Top>
+          </BorderWidth>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>31</ZIndex>
+        <Left>4.32986in</Left>
+        <Height>0.1875in</Height>
+        <Value>Security Signature</Value>
+      </Textbox>
+      <Textbox Name="textbox17">
+        <Top>5.13021in</Top>
+        <Width>1.41667in</Width>
+        <Style>
+          <BorderColor>
+            <Top>Black</Top>
+          </BorderColor>
+          <BorderStyle>
+            <Top>Solid</Top>
+          </BorderStyle>
+          <BorderWidth>
+            <Top>1pt</Top>
+          </BorderWidth>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>30</ZIndex>
+        <Left>2.45139in</Left>
+        <Height>0.1875in</Height>
+        <Value>Customer Signature</Value>
+      </Textbox>
+      <Textbox Name="textbox16">
+        <rd:DefaultName>textbox16</rd:DefaultName>
+        <Top>5.13021in</Top>
+        <Width>1.41667in</Width>
+        <Style>
+          <BorderColor>
+            <Top>Black</Top>
+          </BorderColor>
+          <BorderStyle>
+            <Top>Solid</Top>
+          </BorderStyle>
+          <BorderWidth>
+            <Top>1pt</Top>
+          </BorderWidth>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>29</ZIndex>
+        <Left>0.57292in</Left>
+        <Height>0.1875in</Height>
+        <Value>Driver Signature</Value>
+      </Textbox>
+      <Textbox Name="textbox14">
+        <rd:DefaultName>textbox14</rd:DefaultName>
+        <Top>2.61805in</Top>
+        <Width>0.3125in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>28</ZIndex>
+        <Left>4.23958in</Left>
+        <Height>0.16667in</Height>
+        <Value>Tel.:</Value>
+      </Textbox>
+      <Textbox Name="ClientDetails_5">
+        <rd:DefaultName>ClientDetails_5</rd:DefaultName>
+        <Top>2.61805in</Top>
+        <Width>1.70834in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>27</ZIndex>
+        <Left>4.61458in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.TelephoneNo, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox13">
+        <rd:DefaultName>textbox13</rd:DefaultName>
+        <Top>2.61805in</Top>
+        <Width>0.36459in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>26</ZIndex>
+        <Left>6.45833in</Left>
+        <Height>0.16667in</Height>
+        <Value>FAX:</Value>
+      </Textbox>
+      <Textbox Name="ClientDetails_4">
+        <rd:DefaultName>ClientDetails_4</rd:DefaultName>
+        <Top>2.61805in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>25</ZIndex>
+        <Left>6.88542in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.FaxNo, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox12">
+        <rd:DefaultName>textbox12</rd:DefaultName>
+        <Top>2.86458in</Top>
+        <Width>0.44792in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>24</ZIndex>
+        <Left>5.61458in</Left>
+        <Height>0.16667in</Height>
+        <Value>Email:</Value>
+      </Textbox>
+      <Textbox Name="ClientDetails_3">
+        <rd:DefaultName>ClientDetails_3</rd:DefaultName>
+        <Top>2.86458in</Top>
+        <Width>1.61458in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>23</ZIndex>
+        <Left>6.06251in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.EmailAddress, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox11">
+        <rd:DefaultName>textbox11</rd:DefaultName>
+        <Top>2.86458in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>22</ZIndex>
+        <Left>0.55208in</Left>
+        <Height>0.16667in</Height>
+        <Value>Address:</Value>
+      </Textbox>
+      <Textbox Name="ClientTypeDetails">
+        <rd:DefaultName>ClientTypeDetails</rd:DefaultName>
+        <Top>2.86458in</Top>
+        <Width>4.14583in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>21</ZIndex>
+        <Left>1.39583in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientTypeDetails.Value.Address, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox10">
+        <rd:DefaultName>textbox10</rd:DefaultName>
+        <Top>2.61805in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>20</ZIndex>
+        <Left>0.55208in</Left>
+        <Height>0.16667in</Height>
+        <Value>Company:</Value>
+      </Textbox>
+      <Textbox Name="ClientDetails_2">
+        <rd:DefaultName>ClientDetails_2</rd:DefaultName>
+        <Top>2.61805in</Top>
+        <Width>2.72917in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>19</ZIndex>
+        <Left>1.39583in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.CompanyName, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox9">
+        <rd:DefaultName>textbox9</rd:DefaultName>
+        <Top>2.36111in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>18</ZIndex>
+        <Left>0.55208in</Left>
+        <Height>0.16667in</Height>
+        <Value>Client Code:</Value>
+      </Textbox>
+      <Textbox Name="ClientDetails_1">
+        <rd:DefaultName>ClientDetails_1</rd:DefaultName>
+        <Top>2.36111in</Top>
+        <Width>1.08334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>17</ZIndex>
+        <Left>1.39583in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.ClientCode, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox8">
+        <rd:DefaultName>textbox8</rd:DefaultName>
+        <Top>1.90625in</Top>
+        <Width>0.83334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>16</ZIndex>
+        <Left>2.56251in</Left>
+        <Height>0.19792in</Height>
+        <Value>Driver Name:</Value>
+      </Textbox>
+      <Textbox Name="DriverName">
+        <rd:DefaultName>DriverName</rd:DefaultName>
+        <Top>1.90625in</Top>
+        <Width>4.23959in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>15</ZIndex>
+        <Left>3.41667in</Left>
+        <Height>0.19792in</Height>
+        <Value>=First(Fields!DriverName.Value, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="Quantity">
+        <rd:DefaultName>Quantity</rd:DefaultName>
+        <Top>1.44791in</Top>
+        <Width>0.67709in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>14</ZIndex>
+        <Left>6.97917in</Left>
+        <Height>0.19792in</Height>
+        <Value>=Sum(Fields!Quantity.Value, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox6">
+        <rd:DefaultName>textbox6</rd:DefaultName>
+        <Top>1.44791in</Top>
+        <Width>0.59376in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>13</ZIndex>
+        <Left>6.34375in</Left>
+        <Height>0.19792in</Height>
+        <Value>Quantity:</Value>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <rd:DefaultName>textbox5</rd:DefaultName>
+        <Top>1.44791in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>12</ZIndex>
+        <Left>0.55208in</Left>
+        <Height>0.19792in</Height>
+        <Value>Challan No.:</Value>
+      </Textbox>
+      <Textbox Name="ChallanNo">
+        <rd:DefaultName>ChallanNo</rd:DefaultName>
+        <Top>1.44791in</Top>
+        <Width>1.08334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>11</ZIndex>
+        <Left>1.39583in</Left>
+        <Height>0.19792in</Height>
+        <Value>=First(Fields!ChallanNo.Value, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="ClientDetails">
+        <rd:DefaultName>ClientDetails</rd:DefaultName>
+        <Top>2.36111in</Top>
+        <Width>2.54167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <Left>5.13542in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.ClientName, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <rd:DefaultName>textbox4</rd:DefaultName>
+        <Top>2.36111in</Top>
+        <Width>0.44792in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <Left>4.625in</Left>
+        <Height>0.16667in</Height>
+        <Value>Name:</Value>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <rd:DefaultName>textbox3</rd:DefaultName>
+        <Top>2.36459in</Top>
+        <Width>0.80208in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <Left>2.56251in</Left>
+        <Height>0.16667in</Height>
+        <Value>Client Type:</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Top>1.90625in</Top>
+        <Width>0.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <Left>0.55208in</Left>
+        <Height>0.19792in</Height>
+        <Value>Truck No.:</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>1.44791in</Top>
+        <Width>0.83334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <Left>2.56251in</Left>
+        <Height>0.19792in</Height>
+        <Value>Description:</Value>
+      </Textbox>
+      <Textbox Name="ClientCode">
+        <rd:DefaultName>ClientCode</rd:DefaultName>
+        <Top>2.36459in</Top>
+        <Width>1.08334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <Left>3.41667in</Left>
+        <Height>0.16667in</Height>
+        <Value>=First(Fields!ClientDetails.Value.ClientTypeDetails.ClientTypeName, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="MaterialDescription">
+        <rd:DefaultName>MaterialDescription</rd:DefaultName>
+        <Top>1.44791in</Top>
+        <Width>2.79167in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <Left>3.42709in</Left>
+        <Height>0.19792in</Height>
+        <Value>=First(Fields!MaterialDescription.Value, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="TruckNo">
+        <rd:DefaultName>TruckNo</rd:DefaultName>
+        <Top>1.90625in</Top>
+        <Width>1.08334in</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Left>1.39583in</Left>
+        <Height>0.19792in</Height>
+        <Value>=First(Fields!TruckNo.Value, "CustomObjects_TruckIn")</Value>
+      </Textbox>
+      <Textbox Name="AddressLineTwo">
+        <rd:DefaultName>AddressLineTwo</rd:DefaultName>
+        <Top>0.85416in</Top>
+        <Width>5.10417in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <Left>0.55208in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!AddressLineTwo.Value, "CustomObjects_CompanyInfo")</Value>
+      </Textbox>
+      <Textbox Name="AddressLineOne">
+        <rd:DefaultName>AddressLineOne</rd:DefaultName>
+        <Top>0.60416in</Top>
+        <Width>5.10417in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <Left>0.55208in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!AddressLineOne.Value, "CustomObjects_CompanyInfo")</Value>
+      </Textbox>
+      <Textbox Name="CompanyName">
+        <rd:DefaultName>CompanyName</rd:DefaultName>
+        <Top>0.27083in</Top>
+        <Width>5.10417in</Width>
+        <Style>
+          <FontSize>12pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <Left>0.55208in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!CompanyName.Value, "CustomObjects_CompanyInfo")</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>11.5in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageHeight>6in</PageHeight>
+</Report>
